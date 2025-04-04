@@ -191,7 +191,7 @@ footer {
     display: flex; /* Включаем Flexbox */
     justify-content: center; /* Центрируем текст по горизонтали */
     align-items: center; /* Центрируем текст по вертикали */
-    font-size: 30px; /* Размер текста */
+    font-size: 40px; /* Размер текста */
     font-weight: 400; /* Жирный текст */
     text-align: center; /* Центровка текста */
     margin-top: 72px; /* Отступ сверху */

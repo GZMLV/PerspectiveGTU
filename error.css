@@ -1,0 +1,115 @@
+*{
+    margin:0;
+    padding: 0;
+    text-decoration: none;
+}
+/* Общие стили */
+body {
+    font-family: "Roboto Condensed", sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9; /* Светлый фон */
+    color: #333333; /* Основной цвет текста */
+}
+
+header {
+    height: 70px;
+    background-color: #FF395A;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 0 20px;
+}
+
+header a {
+    color: #FFFFFF;
+    text-decoration: none;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Расстояние между стрелкой и текстом */
+}
+
+header a:hover {
+    text-decoration: underline;
+}
+
+/* Основной текст */
+.main-text {
+    text-align: center;
+    margin: 50px auto;
+    font-size: 40px;
+    font-weight: bold;
+    color: #FF395A;
+    line-height: 1.5;
+}
+
+/* Описание ошибки */
+.error-description {
+    text-align: center;
+    font-size: 20px;
+    line-height: 1.8;
+    margin: 20px auto;
+    max-width: 800px;
+    color: #333333;
+}
+.error-description ul {
+    list-style-position: inside; /* Переносим точки внутрь списка */
+    margin: 10px 0; /* Уменьшаем отступы сверху и снизу */
+    padding: 0; /* Убираем внутренние отступы */
+}
+/* Ссылка на главную */
+.return-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+    font-size: 20px;
+    color: #FF395A;
+    text-decoration: none;
+    font-weight: bold;
+    gap: 10px; /* Расстояние между стрелкой и текстом */
+}
+
+.return-link:hover {
+    text-decoration: underline;
+}
+html, body {
+    height: 100%; /* Устанавливаем высоту на 100% для flexbox */
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+}
+
+footer {
+    width: 100%; /* Ширина на всю страницу */
+    height: 100px; /* Высота футера */
+    background-color: #FF395A; /* Цвет фона */
+    color: white; /* Цвет текста */
+    display: flex; /* Включаем Flexbox */
+    justify-content: center; /* Центрируем текст по горизонтали */
+    align-items: center; /* Центрируем текст по вертикали */
+    font-size: 30px; /* Размер текста */
+    font-weight: 400; /* Жирный текст */
+    text-align: center; /* Центровка текста */
+    margin-top: auto; /* Автоматический отступ сверху */
+}
+
+/* Адаптивность */
+@media (max-width: 1300px) {
+    .main-text {
+        font-size: 30px;
+    }
+
+    .error-description {
+        font-size: 16px;
+    }
+
+    .return-link {
+        font-size: 18px;
+    }
+    footer {
+        font-size: 16px; /* Еще больше уменьшаем размер текста */
+        height: 60px; /* Еще больше уменьшаем высоту футера */
+}
+}
