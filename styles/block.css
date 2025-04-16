@@ -1,19 +1,24 @@
-/* Сброс стилей */
+/* ========================= */
+/* Сброс стилей (Reset) */
+/* ========================= */
 * {
     margin: 0;
     padding: 0;
     text-decoration: none;
+    box-sizing: border-box;
 }
 
 body {
     font-family: "Roboto Condensed", sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f9f9f9; /* Светлый фон */
+    background-color: #fcfcfc;
     color: #333333; /* Основной цвет текста */
 }
 
-/* Стили для header */
+/* ========================= */
+/* Стили для Header */
+/* ========================= */
 header {
     height: 70px;
     background-color: #FF395A;
@@ -36,7 +41,9 @@ header a:hover {
     text-decoration: underline;
 }
 
+/* ========================= */
 /* Стили для заголовка страницы */
+/* ========================= */
 .page-title {
     font-size: 48px;
     color: white;
@@ -44,13 +51,14 @@ header a:hover {
     margin-right: 20px;
 }
 
+/* ========================= */
 /* Стили для блоков */
+/* ========================= */
 .student-block {
     display: flex;
     width: 1126px;
     height: 405px;
     background-color: #FF395A;
-
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     margin: 20px auto; /* Центрируем блоки и добавляем отступы */
     overflow: hidden;
@@ -87,8 +95,10 @@ header a:hover {
     color: #ffffff;
 }
 
-/* Стили для футера */
- footer {
+/* ========================= */
+/* Стили для Footer */
+/* ========================= */
+footer {
     width: 100%;
     height: 100px;
     background-color: #FF395A;
@@ -101,30 +111,30 @@ header a:hover {
     text-align: center;
     margin-top: auto;
 }
-.orange{
+
+/* ========================= */
+/* Темы (Оранжевая тема) */
+/* ========================= */
+.orange {
     background-color: #FF8539;
 }
-/* Тема для univer.html */
 
-/* Стили для header с оранжевой темой */
 header.orange-theme {
     background-color: #FF8539;
 }
 
-/* Стили для блоков с оранжевой темой */
 .student-block.orange-theme {
     background-color: #FF8539;
 }
 
-/* Стили для футера с оранжевой темой */
 footer.orange-theme {
     background-color: #FF8539;
-
-
-
-
-    
 }
+
+/* ========================= */
+/* Адаптивность */
+/* ========================= */
+
 /* Адаптивность для header */
 @media (max-width: 1300px) {
     header {
@@ -141,10 +151,11 @@ footer.orange-theme {
     header a {
         font-size: 18px; /* Уменьшаем размер текста ссылки */
     }
+
     .student-block {
         flex-direction: column; /* Располагаем изображение и текст вертикально */
         width: 90%; /* Уменьшаем ширину блока */
-        max-width: 600px; /* Ограничиваем максимальную ширину */
+        max-width: 800px; /* Ограничиваем максимальную ширину */
         height: auto; /* Автоматическая высота */
         margin: 20px auto; /* Центрируем блоки */
     }
@@ -159,6 +170,7 @@ footer.orange-theme {
         padding: 20px; /* Добавляем отступы */
         width: 400px;
     }
+
     footer {
         font-size: 16px; /* Уменьшаем размер текста */
         height: 80px; /* Уменьшаем высоту футера */
@@ -170,6 +182,7 @@ footer.orange-theme {
     .page-title {
         font-size: 28px; /* Еще больше уменьшаем размер заголовка */
     }
+
     .student-block {
         width: 100%; /* Блок занимает всю ширину экрана */
         max-width: 400px; /* Ограничиваем максимальную ширину */
@@ -185,4 +198,4 @@ footer.orange-theme {
         font-size: 14px; /* Уменьшаем размер текста футера */
         height: 60px; /* Уменьшаем высоту футера */
     }
-}   
+}

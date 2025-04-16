@@ -1,12 +1,20 @@
-*{
+/* Общие стили */
+* {
     margin: 0;
     padding: 0;
     text-decoration: none;
 }
-body{
+body {
     font-family: "Roboto Condensed", sans-serif;
     margin: 0 auto;
+    background-color: #f9f9f9;
 }
+a, a:visited, a:hover, a:active {
+    color: #FFFFFF;
+    text-decoration: none;
+}
+
+/* Стили для шапки */
 header {
     height: 70px;
     background-color: #FF395A;
@@ -14,22 +22,17 @@ header {
     justify-content: center;
     align-items: center;
 }
-
-a, a:visited, a:hover, a:active {
-    color: #FFFFFF;
-    text-decoration: none;
-}
-
 .text-nav {
     padding: 0px 30px;
     font-size: 33px;
     font-weight: lighter;
     text-align: center;
 }
-
 header a {
     margin: 0 40px;
 }
+
+/* Стили для главного блока */
 main {
     display: flex; 
     flex-direction: column;
@@ -42,7 +45,6 @@ main {
     background-position: center;
     background-repeat: no-repeat;
 }
-
 .main-text {
     font-size: 80px; 
     color: white; 
@@ -51,14 +53,14 @@ main {
     font-weight: 400; 
     margin-bottom: 20px;
 }
-
 .contact-info {
     text-align: center; 
     color: white; 
-    font-size: 20px; 
+    font-size: 33px; 
     line-height: 1.5;
-    font-size: 33px;
 }
+
+/* Стили для блоков */
 .blocks-container {
     display: flex; 
     justify-content: center; 
@@ -66,7 +68,7 @@ main {
     margin-top: 72px; 
 }
 .blocks-container a {
-    color: #FF395A; /* Красный текст */
+    color: #FF395A;
 }
 .block {
     width: 278px; 
@@ -87,269 +89,266 @@ main {
     background-color: #FF395A;
     color: white;
 }
+
+/* Стили для баннера */
 .banner {
     margin: 0 auto;
-    width: 1200px; /* Ширина таблички */
-    height: 68px; /* Высота таблички */
-    background-color: #FF395A; /* Цвет фона */
-    border-radius: 10px; /* Скругленные углы */
-    display: flex; /* Включаем Flexbox */
-    justify-content: center; /* Центрируем текст по горизонтали */
-    align-items: center; /* Центрируем текст по вертикали */
-    color: white; /* Цвет текста */
-    font-size: 40px; /* Размер текста */
-    font-weight: 400; /* Жирный текст */
-    margin-top: 72px; /* Отступ сверху */
-    text-align: center; /* Центровка текста */
+    width: 1200px;
+    height: 68px;
+    background-color: #FF395A;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 40px;
+    font-weight: 400;
+    margin-top: 72px;
+    text-align: center;
 }
+
+/* Стили для новостей */
 .news-container {
-    margin-top: 72px; /* Отступ сверху */
-    display: flex; /* Включаем Flexbox */
-    flex-direction: column; /* Располагаем блоки вертикально */
-    gap: 40px; /* Расстояние между блоками */
-    width: 100%; /* Ширина контейнера */
-    align-items: center; /* Центрируем блоки по горизонтали */
-}
-
-.news-block {
-    display: flex; /* Включаем Flexbox для горизонтального расположения */
-    width: 1200px; /* Ширина блока */
-    height: 314px; /* Высота блока */
-    background-color: #FFFFFF; /* Белый фон */
-    overflow: hidden; /* Обрезаем содержимое, выходящее за границы */
-    box-shadow: 3px 4px 10px 3px rgba(0, 0, 0, 0.1); /* Добавляем тень */
-}
-
-.news-image {
-    width: 408px; /* Ширина изображения */
-    height: 314px; /* Высота изображения */
-    object-fit: cover; /* Обрезаем изображение, чтобы оно заполнило блок */
-}
-
-.news-content {
-    padding: 0 20px; /* Внутренние отступы */
+    margin-top: 72px;
     display: flex;
     flex-direction: column;
-    justify-content: center; /* Центрируем текст по вертикали */
-    gap: 10px; /* Расстояние между заголовком и текстом */
-    margin-left: 71px; /* Отступ вправо от изображения */
+    gap: 40px;
+    width: 100%;
+    align-items: center;
 }
-
+.news-block {
+    display: flex;
+    width: 1200px;
+    height: 314px;
+    background-color: #FFFFFF;
+    overflow: hidden;
+    box-shadow: 3px 4px 10px 3px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.news-block:hover {
+    transform: scale(1.02);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+.news-image {
+    width: 408px;
+    height: 314px;
+    object-fit: cover;
+}
+.news-content {
+    padding: 0 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+    margin-left: 71px;
+}
 .news-title {
-    font-size: 40px; /* Размер заголовка */
-    font-weight: bold; /* Жирный текст */
-    color: #000000; /* Черный цвет текста */
-    margin: 0; /* Убираем отступы */
+    font-size: 40px;
+    font-weight: bold;
+    color: #000000;
+    margin: 0;
 }
-
 .news-text {
-    font-size: 32px; /* Размер текста */
-    font-weight: normal; /* Обычный текст */
-    color: #333333; /* Темно-серый цвет текста */
-    margin: 0; /* Убираем отступы */
+    font-size: 30px;
+    font-weight: normal;
+    color: #333333;
+    margin: 0;
 }
+
+/* Стили для секции с картой */
 .location-container {
-    display: flex; /* Включаем Flexbox для горизонтального расположения */
-    justify-content: center; /* Центрируем содержимое по горизонтали */
-    align-items: flex-start; /* Выравниваем содержимое по верхнему краю */
-    gap: 72px; /* Расстояние между картой и текстом */
-    margin-top: 72px; /* Отступ сверху */
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 72px;
+    margin-top: 72px;
 }
-
 .location-container iframe {
-    width: 544px; /* Ширина карты */
-    height: 544px; /* Высота карты */
-    border-radius: 10px; /* Скругленные углы */
-    border: 1px black solid; /* Убираем рамку */
+    width: 544px;
+    height: 544px;
+    border-radius: 10px;
+    border: 1px black solid;
 }
-
 .location-info {
     display: flex;
-    flex-direction: column; /* Располагаем текстовые блоки вертикально */
-    justify-content: flex-start; /* Выравниваем текст по верхнему краю */
-    gap: 20px; /* Расстояние между заголовками и текстом */
-    max-width: 500px; /* Ограничиваем ширину текстового блока */
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 20px;
+    max-width: 500px;
 }
-
 .location-info h2 {
-    font-size: 60px; /* Размер подзаголовков */
-    font-weight: 400; /* Жирный текст */
-    color: #FF395A; /* Красный цвет заголовка */
-    margin: 0; /* Убираем отступы */
+    font-size: 60px;
+    font-weight: 400;
+    color: #FF395A;
+    margin: 0;
 }
-
 .location-info p {
-    font-size: 40px; /* Размер текста */
-    color: #333333; /* Темно-серый цвет текста */
-    margin: 0; /* Убираем отступы */
+    font-size: 40px;
+    color: #333333;
+    margin: 0;
 }
+
+/* Стили для футера */
 footer {
-    width: 100%; /* Ширина на всю страницу */
-    height: 100px; /* Высота футера */
-    background-color: #FF395A; /* Цвет фона */
-    color: white; /* Цвет текста */
-    display: flex; /* Включаем Flexbox */
-    justify-content: center; /* Центрируем текст по горизонтали */
-    align-items: center; /* Центрируем текст по вертикали */
-    font-size: 40px; /* Размер текста */
-    font-weight: 400; /* Жирный текст */
-    text-align: center; /* Центровка текста */
-    margin-top: 72px; /* Отступ сверху */
+    width: 100%;
+    height: 100px;
+    background-color: #FF395A;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    font-weight: 400;
+    text-align: center;
+    margin-top: 72px;
 }
 
-
-
-
-
-
-
-
-
-/*Адаптивчик*/
+/* Адаптивные стили */
 @media (max-width: 1300px) {
+    /* Адаптив для шапки */
     header {
-        flex-direction: column; /* Располагаем элементы друг под другом */
-        justify-content: center; /* Центрируем элементы по горизонтали */
-        height: auto; /* Автоматическая высота */
-        padding: 10px 0; /* Добавляем отступы */
+        flex-direction: column;
+        justify-content: center;
+        height: auto;
+        padding: 10px 0;
     }
-
     header a {
-        margin: 15px 0; /* Увеличиваем отступы между ссылками */
-        display: block; /* Каждая ссылка занимает всю строку */
+        margin: 15px 0;
+        display: block;
     }
+
+    /* Адаптив для блоков */
     .blocks-container {
-        flex-direction: column; /* Располагаем блоки друг под другом */
-        align-items: center; /* Центрируем блоки по горизонтали */
-        gap: 20px; /* Уменьшаем расстояние между блоками */
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
     }
-
     .block {
-        width: 90%; /* Уменьшаем ширину блока */
-        height: auto; /* Автоматическая высота */
-        padding: 20px; /* Добавляем внутренние отступы */
+        width: 90%;
+        height: auto;
+        padding: 20px;
     }
 
+    /* Адаптив для текста */
     body {
-        font-size: 14px; /* Уменьшаем базовый размер шрифта */
+        font-size: 14px;
     }
-
     .main-text {
-        font-size: 50px; /* Уменьшаем размер основного текста */
+        font-size: 50px;
     }
-
     .contact-info {
-        font-size: 20px; /* Уменьшаем размер текста контактной информации */
+        font-size: 20px;
     }
 
+    /* Адаптив для баннера */
     .banner {
-        width: 90%; /* Уменьшаем ширину баннера */
-        font-size: 30px; /* Уменьшаем размер текста */
+        width: 90%;
+        font-size: 30px;
     }
 
+    /* Адаптив для новостей */
     .news-container {
-        gap: 40px; /* Увеличиваем расстояние между новостными блоками */
+        gap: 40px;
     }
-
     .news-block {
-        flex-direction: column; /* Располагаем изображение и текст друг под другом */
-        height: auto; /* Автоматическая высота */
-        width: 90%; /* Уменьшаем ширину блока */
+        flex-direction: column;
+        height: auto;
+        width: 90%;
     }
-
     .news-image {
-        width: 100%; /* Изображение занимает всю ширину */
-        height: auto; /* Автоматическая высота */
+        width: 100%;
+        height: auto;
     }
-
     .news-content {
-        margin-left: 0; /* Убираем отступ слева */
-        padding: 10px; /* Уменьшаем внутренние отступы */
+        margin-left: 0;
+        padding: 10px;
     }
-
     .news-title {
-        font-size: 30px; /* Уменьшаем размер заголовка */
+        font-size: 30px;
     }
-
     .news-text {
-        font-size: 20px; /* Уменьшаем размер текста */
+        font-size: 20px;
     }
+
+    /* Адаптив для секции с картой */
     .location-container {
-        flex-direction: column; /* Располагаем карту и текст друг под другом */
-        align-items: center; /* Центрируем содержимое */
-        gap: 40px; /* Уменьшаем расстояние между элементами */
+        flex-direction: column;
+        align-items: center;
+        gap: 40px;
     }
-
     .location-container iframe {
-        width: 90%; /* Уменьшаем ширину карты */
-        height: auto; /* Автоматическая высота */
+        width: 90%;
+        height: auto;
     }
-
     .location-info {
-        max-width: 90%; /* Уменьшаем ширину текстового блока */
-        text-align: center; /* Центрируем текст */
+        max-width: 90%;
+        text-align: center;
     }
-
     .location-info h2 {
-        font-size: 40px; /* Уменьшаем размер заголовков */
+        font-size: 40px;
+    }
+    .location-info p {
+        font-size: 24px;
     }
 
-    .location-info p {
-        font-size: 24px; /* Уменьшаем размер текста */
-    }
+    /* Адаптив для футера */
     footer {
-        font-size: 30px; /* Уменьшаем размер текста */
-        height: 80px; /* Уменьшаем высоту футера */
+        font-size: 30px;
+        height: 80px;
     }
 }
 
 @media (max-width: 480px) {
+    /* Адаптив для шапки */
     header {
-        padding: 5px 0; /* Уменьшаем отступы */
+        padding: 5px 0;
     }
-
     .text-nav {
-        font-size: 20px; /* Уменьшаем размер текста навигации */
+        font-size: 20px;
     }
 
+    /* Адаптив для блоков */
     .blocks-container {
-        gap: 10px; /* Уменьшаем расстояние между блоками */
+        gap: 10px;
     }
-
     .block {
-        font-size: 20px; /* Уменьшаем размер текста в блоках */
-        padding: 10px; /* Уменьшаем внутренние отступы */
+        font-size: 20px;
+        padding: 10px;
     }
 
+    /* Адаптив для баннера */
     .banner {
-        font-size: 20px; /* Уменьшаем размер текста баннера */
+        font-size: 20px;
     }
 
+    /* Адаптив для текста */
     .main-text {
-        font-size: 30px; /* Еще больше уменьшаем размер основного текста */
+        font-size: 30px;
     }
-
     .contact-info {
-        font-size: 16px; /* Уменьшаем размер текста контактной информации */
+        font-size: 16px;
     }
 
+    /* Адаптив для новостей */
     .news-container {
-        gap: 30px; /* Увеличиваем расстояние между новостными блоками */
+        gap: 30px;
     }
+
+    /* Адаптив для секции с картой */
     .location-container iframe {
-        width: 100%; /* Карта занимает всю ширину */
-        height: auto; /* Автоматическая высота */
+        width: 100%;
+        height: auto;
     }
-
     .location-info h2 {
-        font-size: 30px; /* Еще больше уменьшаем размер заголовков */
+        font-size: 30px;
+    }
+    .location-info p {
+        font-size: 18px;
     }
 
-    .location-info p {
-        font-size: 18px; /* Еще больше уменьшаем размер текста */
-    }
+    /* Адаптив для футера */
     footer {
-        font-size: 16px; /* Еще больше уменьшаем размер текста */
-        height: 60px; /* Еще больше уменьшаем высоту футера */
+        font-size: 16px;
+        height: 60px;
     }
 }

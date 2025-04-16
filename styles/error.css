@@ -8,7 +8,7 @@ body {
     font-family: "Roboto Condensed", sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f9f9f9; /* Светлый фон */
+    background-color: #fcfcfc;
     color: #333333; /* Основной цвет текста */
 }
 
@@ -89,7 +89,7 @@ footer {
     display: flex; /* Включаем Flexbox */
     justify-content: center; /* Центрируем текст по горизонтали */
     align-items: center; /* Центрируем текст по вертикали */
-    font-size: 30px; /* Размер текста */
+    font-size: 20px; /* Размер текста */
     font-weight: 400; /* Жирный текст */
     text-align: center; /* Центровка текста */
     margin-top: auto; /* Автоматический отступ сверху */
